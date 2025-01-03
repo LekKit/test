@@ -10,7 +10,8 @@
         <script src=coi-serviceworker.min.js></script>
         <div class=emscripten id=status>Downloading...</div>
         <div class=emscripten><progress hidden id=progress max=100 value=0></progress></div>
-        <div>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <textarea style="position: absolute; width: 640px; height: 480px; opacity: 0;"></textarea>
             <canvas class=emscripten id=canvas width=640 height=480 oncontextmenu=event.preventDefault() tabindex=-1></canvas>
         </div>
         <hr>
