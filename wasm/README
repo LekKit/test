@@ -1,0 +1,5 @@
+# How to build RVVM Web demo
+
+- Install Emscripten
+- Drop `wasm` directory into `RVVM` repo directory
+- `wasm/build.sh`
