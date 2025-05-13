@@ -2,4 +2,4 @@
 
 - Install Emscripten
 - Drop `wasm` directory into `RVVM` repo directory
-- `wasm/build.sh`
+- Run `$ sh wasm/build.sh`
