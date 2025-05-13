@@ -23,7 +23,7 @@
         </style>
 
         <!-- Mandatory xterm.js styles -->
-        <link rel="stylesheet" href="/xterm.css" />
+        <link rel="stylesheet" href="./xterm.css" />
     </head>
     <body>
         <!-- Warn the user if their browser may not work -->
@@ -45,11 +45,11 @@
             <div id="terminal" style="width: 100%;"></div>
         </div>
 
-        <!-- Warn the user if their browser may not work -->
+        <!-- Load xterm.js, xterm-pty.mjs, rvvm_wasm32.mjs modules -->
         <script type="module">
-            import "/xterm.js";
-            import { openpty } from "/xterm-pty.mjs";
-            import rvvm from "/rvvm_wasm32.mjs";
+            import "./xterm.js";
+            import { openpty } from "./xterm-pty.mjs";
+            import rvvm from "./rvvm_wasm32.mjs";
 
             var status = document.getElementById("status");
             var canvas = document.getElementById("canvas");
