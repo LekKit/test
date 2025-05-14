@@ -29,7 +29,8 @@
         <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <p id="status" align=center></p>
 
-            <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
+            <!-- Default canvas size to 0 x 0 so it's invisible if WASM doesn't actually use it -->
+            <canvas id="canvas" width=0px height=0px oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
 
             <p></p>
 
@@ -48,7 +49,16 @@
 
             window.onerror = function (msg, url, lineNo, columnNo, error) {
                 status.innerHTML = "JS Exception at " + url + "@" + lineNo + ": <br>" + msg;
+                debugger;
+                return true;
             }
+
+            // Prevent TAB from messing the focus
+            document.addEventListener("keydown", function(e) {
+                if (e.keyCode == 9) {
+                    e.preventDefault();
+                }
+            });
 
             var term = new Terminal({
                 cols: 100,
